@@ -1,0 +1,80 @@
++------------------+          +-------------------+
+|     USERS        |          |    CATEGORIES     |
++------------------+          +-------------------+
+| PK id            |          | PK id             |
+|    username      |          |    name (unique)  |
+|    password      |          |    description    |
+|    full_name     |          +--------+----------+
+|    email         |                   |
+|    role          |                 1 |
+|    enabled       |                   | (one category
+|    created_at    |                   |  has many
++------------------+                   |  products)
+                                        | N
+                              +---------+----------+
+                              |      PRODUCTS      |
+                              +--------------------+
+                              | PK id              |
+                              |    product_code    |
+                              |    name            |
+                              |    description     |
+                              | FK category_id  ---+---> CATEGORIES
+                              |    unit            |
+                              |    unit_price      |
+                              |    reorder_level   |
+                              |    status          |
+                              |    created_at      |
+                              +---+------------+---+
+                                  |            |
+                              1   |            | 1
+                        (one-to-  |            | (one product
+                          one)    |            |  in many
+                                  | 1          |  order items)
+                    +-------------+------+     | N
+                    |    INVENTORY       |     |
+                    +--------------------+     |
+                    | PK id              |     |
+                    | FK product_id -----+  +--+-----------------------+
+                    |    qty_in_stock    |  |  PURCHASE_ORDER_ITEMS    |
+                    |    qty_reserved    |  +--------------------------+
+                    |    last_updated    |  | PK id                    |
+                    +--------------------+  | FK purchase_order_id  ---+-> PO
+                                           | FK product_id            |
+                                           |    quantity              |
+                                           |    unit_price            |
+                                           |    total_price           |
+                                           +--+-----------------------+
+                                              | N
+                                              |
+                                           1  |
+                              +---------------+------+
+                              |   PURCHASE_ORDERS    |
+                              +----------------------+
+                              | PK id                |
+                              |    order_number      |
+                              | FK supplier_id ------+--> SUPPLIERS
+                              |    order_date        |
+                              |    expected_del_date |
+                              |    delivery_date     |
+                              |    status            |
+                              |    total_amount      |
+                              |    remarks           |
+                              |    created_at        |
+                              +----------------------+
+                                         N
+                                         |
+                                         | 1
+                              +----------+-----------+
+                              |      SUPPLIERS       |
+                              +----------------------+
+                              | PK id                |
+                              |    name              |
+                              |    contact_person    |
+                              |    email             |
+                              |    phone             |
+                              |    address           |
+                              |    city              |
+                              |    country           |
+                              |    status            |
+                              |    created_at        |
+                              +----------------------+
