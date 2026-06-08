@@ -1,27 +1,88 @@
-# Project Title
-
-Procurement Management System
+# Procurement Management System
 
 ## Project Overview
 
-This project is developed to simplify inventory and procurement activities within an organization. It provides a centralized platform to manage products, suppliers, stock availability, and purchase orders. Instead of maintaining inventory records manually, users can monitor stock levels and procurement transactions through a digital system.
+The Procurement Management System is a web-based inventory management application developed to help organizations manage products, suppliers, stock levels, and procurement activities through a centralized platform.
+
+The system digitizes inventory operations by maintaining product records, tracking stock availability, managing supplier information, and recording purchase orders. It reduces manual record keeping and provides better visibility into inventory movement and procurement activities.
+
+The platform is designed for small and medium-scale businesses that require a simple and efficient solution for inventory control and procurement management.
+
+---
+
+## Objective
+
+To develop a centralized Procurement Management System that simplifies inventory tracking and procurement operations.
+
+The system aims to:
+
+* Maintain product inventory records.
+* Manage supplier information.
+* Monitor stock availability.
+* Record procurement transactions.
+* Generate inventory reports.
+* Reduce manual data entry.
+* Improve inventory visibility.
+* Support better procurement decisions.
+
+---
 
 ## Problem Statement
 
-In many small and medium-sized organizations, inventory details are often maintained using spreadsheets or manual registers. As the number of products increases, tracking stock levels becomes difficult and time-consuming. Missing stock updates, duplicate entries, and delayed purchase decisions can affect daily operations.
+Many organizations still manage inventory and procurement activities using spreadsheets, notebooks, and manual registers.
 
-The aim of this project is to provide a simple and efficient system for managing inventory records and procurement activities while reducing manual effort and improving data accuracy.
+This approach often leads to:
 
-## Objectives
+* Duplicate product records.
+* Inaccurate stock information.
+* Delayed procurement decisions.
+* Difficulty in tracking supplier transactions.
+* Inventory shortages and overstocking.
+* Manual reporting efforts.
+* Increased chances of human error.
 
-* Maintain product and inventory records
-* Manage supplier information
-* Monitor stock availability
-* Record procurement transactions
-* Generate inventory reports
-* Reduce manual record keeping
+The absence of a centralized inventory management platform affects operational efficiency and inventory accuracy.
 
-## Technologies Used
+This project addresses these challenges by providing a digital procurement and inventory management solution.
+
+---
+
+## User & Module Identification
+
+The Procurement Management System is designed for inventory administrators and store managers who are responsible for managing stock and procurement activities.
+
+Users interact with the system through a web interface to maintain inventory records, supplier details, purchase orders, and reports.
+
+### Modules List
+
+* Authentication Module
+* Product Management Module
+* Supplier Management Module
+* Inventory Management Module
+* Purchase Order Management Module
+* Dashboard & Reporting Module
+
+---
+
+## System Use Case Overview
+
+![System Overview](docs/images/system-overview.png)
+
+---
+
+## Module Breakdown
+
+![Module Breakdown](docs/images/module-breakdown.png)
+
+---
+
+## Entity Relationship Diagram (ER Diagram)
+
+![ER Diagram](er-diagram.png)
+
+---
+
+## Technology Stack
 
 ### Frontend
 
@@ -37,3 +98,66 @@ The aim of this project is to provide a simple and efficient system for managing
 ### Database
 
 * PostgreSQL
+
+### Development Tools
+
+* VS Code
+* GitHub
+* Postman
+
+---
+
+## Database Entities
+
+### User
+
+* User ID
+* Name
+* Email
+* Password
+* Role
+
+### Product
+
+* Product ID
+* Product Name
+* Category
+* Unit Price
+* Quantity
+
+### Supplier
+
+* Supplier ID
+* Supplier Name
+* Contact Details
+
+### Inventory
+
+* Inventory ID
+* Product ID
+* Stock Quantity
+
+### Purchase Order
+
+* Purchase Order ID
+* Supplier ID
+* Order Date
+* Status
+
+### Purchase Order Item
+
+* Item ID
+* Purchase Order ID
+* Product ID
+* Quantity
+
+---
+
+## Future Enhancements
+
+* Barcode Integration
+* QR Code Tracking
+* Email Notifications
+* Mobile Application
+* Inventory Forecasting
+* Advanced Analytics Dashboard
