@@ -66,14 +66,12 @@ Users interact with the system through a web interface to maintain inventory rec
 
 ## System Use Case Overview
 
-![System Overview](docs/images/system-overview.png)
-
+![System Overview](usecase-diagram.png)
 ---
 
 ## Module Breakdown
 
-![Module Breakdown](docs/images/module-breakdown.png)
-
+![Module Breakdown](module-breakdown.svg)
 ---
 
 ## Entity Relationship Diagram (ER Diagram)
