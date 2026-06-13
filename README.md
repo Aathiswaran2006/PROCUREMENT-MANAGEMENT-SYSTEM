@@ -336,39 +336,4 @@ The Module Breakdown Diagram illustrates the internal modules and their interact
 
 ---
 
-# Future Enhancements
 
-- Mobile Application
-- AI-Based Complaint Classification
-- Smart Issue Prioritization
-- Geo-Location Mapping
-- Real-Time Push Notifications
-- Government Portal Integration
-- Analytics Dashboard
-- Complaint Heatmap Visualization
-- Multi-Language Support
-- AI Chatbot Assistant
-
----
-
-# Expected Outcome
-
-The system will provide a transparent and efficient platform for reporting, tracking, and resolving civic issues.
-
-Citizens will be able to monitor the progress of their complaints in real-time, while authorities can efficiently manage issue resolution through a centralized dashboard.
-
-The platform will improve public participation, enhance government responsiveness, and contribute toward smart governance initiatives.
-
----
-
-# Authors
-
-**Aathiswaran Raja**
-
-B.Tech Artificial Intelligence and Machine Learning
-
-Smart India Hackathon (SIH) 2025
-
-Project Code: SIH25031
-
-Project Title: Crowdsourced Civic Issue Reporting and Resolution System
