@@ -1,263 +1,116 @@
 # Crowdsourced Civic Issue Reporting and Resolution System
 
-## Project Overview
+---
 
-The Crowdsourced Civic Issue Reporting and Resolution System is a web-based platform that enables citizens to report civic problems such as potholes, garbage accumulation, drainage blockages, water leakages, broken streetlights, and other public infrastructure issues directly to the concerned authorities.
+# Project Overview
 
-The platform provides a centralized mechanism for issue reporting, complaint management, authority assignment, status tracking, and resolution monitoring. It improves communication between citizens and local government departments while increasing transparency and accountability in civic administration.
+The Crowdsourced Civic Issue Reporting and Resolution System is a web-based platform that enables citizens to report public issues such as road damage, garbage accumulation, water leakage, streetlight failures, and sanitation problems directly to responsible authorities.
 
-The system is designed to support smart governance by encouraging public participation and enabling efficient issue resolution through digital technologies.
+The system provides a centralized platform for issue submission, tracking, verification, and resolution. Citizens can upload issue details along with images and location information, while authorities can monitor complaints, update statuses, and notify users regarding progress.
+
+The platform aims to improve communication between citizens and government departments, reduce response times, and increase transparency in civic issue management.
 
 ---
 
-## Objective
+# Objective
 
-To develop a centralized Civic Issue Reporting and Resolution System that simplifies issue reporting, complaint management, and resolution tracking.
+To develop a centralized Civic Issue Reporting System that simplifies issue reporting and resolution processes.
 
 The system aims to:
 
-- Digitize civic issue reporting.
-- Enable image-based complaint submission.
-- Allow location-based issue tracking.
-- Maintain centralized complaint records.
-- Improve authority response time.
-- Provide transparent complaint tracking.
-- Reduce manual complaint management.
-- Generate reports and analytics.
-- Support smart city initiatives.
+- Enable citizens to report civic issues online.
+- Allow authorities to track and manage complaints.
+- Provide real-time status updates.
+- Improve transparency in complaint resolution.
+- Reduce manual complaint handling.
+- Support image-based issue reporting.
+- Enhance citizen engagement.
+- Generate reports for monitoring civic services.
 
 ---
 
-## Problem Statement
+# Problem Statement
 
-Many civic issues are still reported through phone calls, physical visits to government offices, and manual complaint registers.
+Many civic issues remain unresolved because citizens lack a proper platform to report them directly to authorities.
 
-This approach often leads to:
+Current complaint handling methods often result in:
 
-- Delayed complaint registration.
+- Delayed issue resolution.
+- Lack of transparency.
 - Poor communication between citizens and authorities.
-- Lack of transparency in complaint resolution.
 - Difficulty tracking complaint status.
-- Duplicate issue reporting.
-- Slow response times.
-- Manual paperwork and administrative overhead.
-- Limited public participation.
+- Manual record maintenance.
+- Duplicate complaints.
+- Inefficient monitoring.
 
-The absence of a centralized civic issue management platform affects operational efficiency and public satisfaction.
+The absence of a centralized complaint management platform affects public service quality and citizen satisfaction.
 
-This project addresses these challenges by providing a digital platform for reporting, monitoring, and resolving civic issues.
+This project addresses these challenges through a digital civic issue reporting and resolution platform.
 
 ---
 
-## User & Module Identification
+# User & Module Identification
 
-The Crowdsourced Civic Issue Reporting and Resolution System is designed for Citizens, Government Authorities, and System Administrators.
+The system is designed for Citizens, Government Authorities, and Administrators who are responsible for reporting, monitoring, and resolving civic issues.
 
-Citizens can report civic problems and monitor their status, while authorities manage and resolve complaints through an administrative dashboard.
+Users interact through a web interface to submit complaints, track issue status, receive notifications, and manage complaint records.
 
-### Modules List
+---
+
+# Modules List
 
 - Authentication Module
-- Citizen Management Module
 - Complaint Management Module
+- Category Management Module
 - Authority Management Module
-- Issue Category Management Module
 - Status Tracking Module
-- Notification Module
+- Notification Management Module
 - Dashboard & Reporting Module
 
 ---
 
 # System Use Case Overview
 
-![Use Case Diagram](Use_Case_Diagram.png)
+The Use Case Diagram illustrates interactions between Citizens and Authorities within the Civic Issue Reporting System.
 
-The Use Case Diagram illustrates the interaction between Citizens, Authorities, and Administrators within the system.
-
-Citizens can register, log in, report civic issues, upload supporting images, and track complaint status. Authorities can view complaints, assign issues, update progress, and resolve reported problems. Administrators manage users, categories, and system reports.
+![System Use Case Diagram](files/civic_use_case_diagram.png)
 
 ---
 
 # Database Requirement Analysis
 
-The system requires a centralized PostgreSQL database to store user information, complaint records, issue categories, authority details, notifications, and complaint status updates.
+The system requires a centralized relational database to store users, complaints, categories, authorities, notifications, and status updates.
 
-The database supports secure storage, complaint tracking, reporting, and efficient communication between stakeholders.
+The database ensures proper issue tracking, status monitoring, and communication between citizens and government departments.
 
-## Table List
+---
+
+# Table List
 
 | Table Name | Description |
 |------------|-------------|
-| Users | Stores citizen, authority, and admin accounts |
-| Complaints | Stores issue reports submitted by citizens |
-| Categories | Stores issue classification details |
-| Authorities | Stores department information |
-| Status_Updates | Stores complaint progress history |
-| Notifications | Stores alerts and notifications |
+| User | Stores citizen and authority information |
+| Complaint | Stores complaint details |
+| Category | Stores issue categories |
+| Authority | Stores department details |
+| Status_Update | Stores complaint progress history |
+| Notification | Stores user notifications |
 
 ---
 
 # Entity Relationship Diagram (ER Diagram)
 
-![ER Diagram](ER_Diagram.png)
+The ER Diagram represents relationships between users, complaints, authorities, notifications, and complaint status updates.
 
-The ER Diagram represents the relationships between users, complaints, authorities, categories, notifications, and status updates within the system database.
+![ER Diagram](files/civic_er_diagram.png)
 
 ---
 
 # Database Schema
 
-The database schema is designed to maintain efficient relationships between system entities and support scalable complaint management operations.
+The database schema defines primary keys, foreign keys, and relationships required for complaint management and tracking.
 
-### Main Relationships
-
-- One User can submit multiple Complaints.
-- One Category can contain multiple Complaints.
-- One Complaint can have multiple Status Updates.
-- One User can receive multiple Notifications.
-- Authorities manage and resolve assigned Complaints.
-
----
-
-# UI Wireframe Design
-
-The system includes multiple user interfaces designed for different stakeholders.
-
-### Planned Screens
-
-- Home Page
-- User Registration Page
-- User Login Page
-- Complaint Submission Page
-- Complaint Tracking Page
-- Authority Dashboard
-- Admin Dashboard
-- Reports Page
-
-### Wireframe
-
-_Add UI Wireframe Images Here_
-
----
-
-# Login & Dashboard UI Design
-
-The login and dashboard modules provide role-based access control and monitoring capabilities.
-
-### Features
-
-#### Citizen Dashboard
-
-- Submit Complaints
-- View Complaint Status
-- Receive Notifications
-
-#### Authority Dashboard
-
-- View Assigned Complaints
-- Update Complaint Status
-- Resolve Issues
-
-#### Admin Dashboard
-
-- Manage Users
-- Manage Categories
-- Generate Reports
-
-### Dashboard Screens
-
-_Add Dashboard Screenshots Here_
-
----
-
-# Navigation & Form Design
-
-The system provides a user-friendly navigation structure for easy access to features.
-
-### Navigation Flow
-
-Home Page
-
-↓
-
-Login / Register
-
-↓
-
-Dashboard
-
-↓
-
-Complaint Management
-
-↓
-
-Status Tracking
-
-↓
-
-Reports
-
-### Forms Included
-
-- Registration Form
-- Login Form
-- Complaint Submission Form
-- Status Update Form
-- Category Management Form
-
----
-
-# System Overview
-
-![System Overview](System_Overview.png)
-
-The System Overview Diagram presents the high-level architecture of the platform.
-
-It shows the interaction between Citizens, Authorities, Application Server, Complaint Management Module, Notification Module, Dashboard Module, and Database.
-
----
-
-# Module Breakdown
-
-![Module Breakdown](Module_Breakdown.png)
-
-The Module Breakdown Diagram illustrates the internal modules and their interactions.
-
-### Authentication Module
-
-- User Registration
-- Login
-- Role Management
-
-### Complaint Management Module
-
-- Issue Reporting
-- Complaint Tracking
-- Complaint History
-
-### Authority Management Module
-
-- Issue Assignment
-- Status Updates
-- Resolution Management
-
-### Notification Module
-
-- Email Alerts
-- Complaint Status Notifications
-
-### Dashboard Module
-
-- Analytics
-- Reports
-- Statistics
-
-### Administration Module
-
-- User Management
-- Category Management
-- System Monitoring
+![Database Schema](files/civic_database_schema.png)
 
 ---
 
@@ -283,7 +136,6 @@ The Module Breakdown Diagram illustrates the internal modules and their interact
 - VS Code
 - GitHub
 - Postman
-- pgAdmin
 
 ---
 
@@ -317,7 +169,7 @@ The Module Breakdown Diagram illustrates the internal modules and their interact
 
 - Authority ID
 - Department Name
-- Contact Information
+- Contact Details
 
 ## Status Update
 
@@ -336,4 +188,21 @@ The Module Breakdown Diagram illustrates the internal modules and their interact
 
 ---
 
+# Future Enhancements
 
+- Mobile Application Support
+- GPS-Based Complaint Mapping
+- AI-Based Issue Classification
+- Multi-Language Support
+- SMS Notifications
+- Complaint Priority Prediction
+- Department Performance Analytics
+- Public Issue Heatmaps
+
+---
+
+# License
+
+This project is developed for Smart India Hackathon (SIH 2025) academic and learning purposes.
+
+---
