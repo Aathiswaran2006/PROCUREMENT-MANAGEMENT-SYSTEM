@@ -1,157 +1,135 @@
-# Procurement Management System
+# Crowdsourced Civic Issue Reporting and Resolution System
 
 ## Project Overview
-
-The Procurement Management System is a web-based inventory management application developed to help organizations manage products, suppliers, stock levels, and procurement activities through a centralized platform.
-
-The system digitizes inventory operations by maintaining product records, tracking stock availability, managing supplier information, and recording purchase orders. It reduces manual record keeping and provides better visibility into inventory movement and procurement activities.
-
-The platform is designed for small and medium-scale businesses that require a simple and efficient solution for inventory control and procurement management.
+(Project Overview content)
 
 ---
 
 ## Objective
-
-To develop a centralized Procurement Management System that simplifies inventory tracking and procurement operations.
-
-The system aims to:
-
-* Maintain product inventory records.
-* Manage supplier information.
-* Monitor stock availability.
-* Record procurement transactions.
-* Generate inventory reports.
-* Reduce manual data entry.
-* Improve inventory visibility.
-* Support better procurement decisions.
+(Objective content)
 
 ---
 
 ## Problem Statement
-
-Many organizations still manage inventory and procurement activities using spreadsheets, notebooks, and manual registers.
-
-This approach often leads to:
-
-* Duplicate product records.
-* Inaccurate stock information.
-* Delayed procurement decisions.
-* Difficulty in tracking supplier transactions.
-* Inventory shortages and overstocking.
-* Manual reporting efforts.
-* Increased chances of human error.
-
-The absence of a centralized inventory management platform affects operational efficiency and inventory accuracy.
-
-This project addresses these challenges by providing a digital procurement and inventory management solution.
+(Problem Statement content)
 
 ---
 
 ## User & Module Identification
-
-The Procurement Management System is designed for inventory administrators and store managers who are responsible for managing stock and procurement activities.
-
-Users interact with the system through a web interface to maintain inventory records, supplier details, purchase orders, and reports.
+(User & Module Identification content)
 
 ### Modules List
 
-* Authentication Module
-* Product Management Module
-* Supplier Management Module
-* Inventory Management Module
-* Purchase Order Management Module
-* Dashboard & Reporting Module
+- Authentication Module
+- Citizen Management Module
+- Complaint Management Module
+- Issue Category Management Module
+- Authority Management Module
+- Status Tracking Module
+- Notification Module
+- Dashboard & Reporting Module
 
 ---
 
-## System Use Case Overview
+# System Use Case Overview
 
-<img src="./Use%20Case%20Diagram.png" width="100%">
+![Use Case Diagram](Use_Case_Diagram.png)
 
-## Module Breakdown
+---
 
-<img src="./module_breakdown_svg.svg" width="100%">
+# Database Requirement Analysis
 
-## Entity Relationship Diagram (ER Diagram)
+The system requires a centralized database to store user accounts, complaint details, issue categories, authority information, notifications, and status updates.
 
-<img src="./ER%20Diagram.png" width="100%">
+### Table List
+
+| Table Name | Description |
+|------------|-------------|
+| Users | Stores citizen and authority accounts |
+| Complaints | Stores issue reports |
+| Categories | Stores issue categories |
+| Authorities | Stores department details |
+| Status_Updates | Stores complaint status history |
+| Notifications | Stores notification records |
+
+---
+
+# Entity Relationship Diagram (ER Diagram)
+
+![ER Diagram](ER_Diagram.png)
+
+---
+
+# Database Schema
+
+The database schema is designed to maintain relationships between users, complaints, authorities, and notifications while ensuring efficient complaint tracking and resolution.
+
+---
+
+# UI Wireframe Design
+
+Add screenshots of:
+
+- Home Page
+- Login Page
+- Complaint Submission Page
+- Complaint Tracking Page
+- Admin Dashboard
+
+---
+
+# Login & Dashboard UI Design
+
+Add UI mockups/screenshots here.
+
+---
+
+# Navigation & Form Design
+
+Add navigation structure and complaint submission forms here.
+
+---
+
+# System Overview
+
+![System Overview](System_Overview.png)
+
+---
+
+# Module Breakdown
+
+![Module Breakdown](Module_Breakdown.png)
+
+---
 
 ## Technology Stack
 
 ### Frontend
-
-* HTML
-* CSS
-* Bootstrap
-* JavaScript
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
 
 ### Backend
-
-* Spring Boot (Java)
+- Spring Boot (Java)
 
 ### Database
-
-* PostgreSQL
+- PostgreSQL
 
 ### Development Tools
-
-* VS Code
-* GitHub
-* Postman
-
----
-
-## Database Entities
-
-### User
-
-* User ID
-* Name
-* Email
-* Password
-* Role
-
-### Product
-
-* Product ID
-* Product Name
-* Category
-* Unit Price
-* Quantity
-
-### Supplier
-
-* Supplier ID
-* Supplier Name
-* Contact Details
-
-### Inventory
-
-* Inventory ID
-* Product ID
-* Stock Quantity
-
-### Purchase Order
-
-* Purchase Order ID
-* Supplier ID
-* Order Date
-* Status
-
-### Purchase Order Item
-
-* Item ID
-* Purchase Order ID
-* Product ID
-* Quantity
+- VS Code
+- GitHub
+- Postman
+- pgAdmin
 
 ---
 
 ## Future Enhancements
 
-* Barcode Integration
-* QR Code Tracking
-* Email Notifications
-* Mobile Application
-* Inventory Forecasting
-* Advanced Analytics Dashboard
+- Mobile Application
+- Geo-location Integration
+- AI Complaint Classification
+- Smart Issue Prioritization
+- Government Portal Integration
+- Real-Time Notifications
+- Analytics Dashboard
